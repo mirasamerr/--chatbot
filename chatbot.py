@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 
-client = Groq(api_key="your-api-key")
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # Initialize session state on first run
 if "messages" not in st.session_state:
